@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+   <h1 class="my-5 text-center">Welcome to Intern Alert!</h1>
+   <form class="row g-3 justify-content-center" action="/results" method = "POST">
+    <div class="col-auto">
+      <label for="inputCategory" class="visually-hidden">Search Category (ex. Business)</label>
+      <input name="Category" type="text" class="form-control" id="inputCategory" placeholder="Category">
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary mb-3">Search</button>
+    </div>
+  </form>
+{% endblock %}

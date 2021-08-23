@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+   <h1 class="my-5 text-center">Search Results!</h1>
+   <div class="row row-cols-1 row-cols-md-5 g-4 px-5">
+    {% for result in results %}
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="card-title">{{result.title}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{result.company}}</h6>
+            <a href="https://{{result.link}}" target="_blank" rel="noopener noreferrer" class="card-link">Apply Here!</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+   </div>
+{% endblock %}
